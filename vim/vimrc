@@ -1,0 +1,67 @@
+" https://gist.github.com/rlaskey/fec7a95330b7729440d6
+
+set nocompatible
+
+set mouse=nv
+
+set backspace=2
+
+set viminfo='0,/0,<7
+
+syntax on
+color slate
+
+set tabstop=4
+set shiftwidth=4
+
+set smartindent
+
+set hlsearch
+set showmatch
+set grepprg=rg\ --vimgrep
+
+set ruler
+set number
+set cursorcolumn
+set signcolumn=yes
+
+set laststatus=2
+set wildmenu
+
+set listchars=tab:\.\ ,trail:-
+set list
+
+autocmd FileType gitcommit,markdown,mail setlocal spell textwidth=72
+autocmd Filetype yaml setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd Filetype python setlocal shiftwidth=4 tabstop=4 expandtab
+
+
+nnoremap <Leader>lo :lopen<Return>
+nnoremap <Leader>lc :lclose<Return>
+nnoremap <Leader>ln :lnext<Return>
+nnoremap <Leader>lp :lprevious<Return>
+
+nnoremap <Leader>co :copen<Return>
+nnoremap <Leader>cc :cclose<Return>
+nnoremap <Leader>cn :cnext<Return>
+nnoremap <Leader>cp :cprevious<Return>
+
+" fzf.vim
+nnoremap <Leader>r :Rg<Return>
+nnoremap <Leader>f :Files<Return>
+nnoremap <Leader>s :GFiles?<Return>
+
+
+" https://github.com/junegunn/vim-plug/wiki/tips
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+	silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
+	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+	Plug 'junegunn/fzf.vim'
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+	Plug 'neovim/nvim-lspconfig'
+call plug#end()
