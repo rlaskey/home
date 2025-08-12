@@ -69,7 +69,7 @@ endif
 " vim-plug -- the list
 try
 	call plug#begin(s:plugged)
-		Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+		Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 		Plug 'junegunn/fzf.vim'
 	call plug#end()
 catch
