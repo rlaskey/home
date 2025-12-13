@@ -1,3 +1,5 @@
+PS1='\D{%d %H:%M} \W \$ '
+
 source ssh-agent.sh > /dev/null
 export FZF_DEFAULT_COMMAND='rg --files'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
