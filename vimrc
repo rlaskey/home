@@ -1,8 +1,5 @@
 " ~/.vimrc
 
-
-set nocompatible
-
 set mouse=nv
 
 set backspace=2
