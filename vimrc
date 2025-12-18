@@ -32,7 +32,7 @@ set list
 
 
 autocmd FileType gitcommit,markdown,mail setlocal spell textwidth=72
-autocmd Filetype yaml setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd Filetype typescript,typescriptreact,yaml setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd Filetype python setlocal shiftwidth=4 tabstop=4 expandtab
 
 
