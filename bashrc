@@ -1,5 +1,12 @@
-export HISTCONTROL=ignoreboth:erasedups
-export HISTIGNORE='ls*:cd*:cp*:mv*:cat*:echo*:[bf]g:ps*:top*:curl*:vim*'
+export HISTCONTROL='ignoreboth:erasedups'
+
+HISTIGNORE='ls*:cd*' # traversal
+HISTIGNORE+=':cp*:mv*:rm*' # file ops
+HISTIGNORE+=':cat*:echo*' # inspecting things
+HISTIGNORE+=':[bf]g:ps*:top*' # processes
+HISTIGNORE+=':curl*:vim*:nah' # applications
+export HISTIGNORE
+
 export EDITOR=vim
 PS1='\D{%d %H:%M} \W \$ '
 
