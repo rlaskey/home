@@ -1,5 +1,5 @@
 export HISTCONTROL=ignoreboth:erasedups
-export HISTIGNORE='ls*:cd*:echo*:cat*:[bf]g:ps*:top*:curl*:vim*'
+export HISTIGNORE='ls*:cd*:cp*:mv*:cat*:echo*:[bf]g:ps*:top*:curl*:vim*'
 export EDITOR=vim
 PS1='\D{%d %H:%M} \W \$ '
 
