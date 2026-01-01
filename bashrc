@@ -1,10 +1,10 @@
 export HISTCONTROL='ignoreboth:erasedups'
 
 HISTIGNORE='ls*:cd*' # traversal
-HISTIGNORE+=':cp*:mv*:rm*' # file ops
+HISTIGNORE+=':cp*:mv*:rm*:mkdir*' # file ops
 HISTIGNORE+=':cat*:echo*' # inspecting things
 HISTIGNORE+=':[bf]g:ps*:top*' # processes
-HISTIGNORE+=':curl*:vim*:nah' # applications
+HISTIGNORE+=':curl*:vim*' # applications
 export HISTIGNORE
 
 export EDITOR=vim
@@ -14,6 +14,7 @@ PS1='\D{%d %H:%M} \W \$ '
 export SSH_AUTH_SOCK=$HOME/.ssh/agent
 if [ ! -S $SSH_AUTH_SOCK ] || [ $(ssh-add -l >/dev/null 2>&1; echo $?) = 2 ]; then
 	# echo 'NOTE: starting a new SSH agent.'
+	rm $SSH_AUTH_SOCK
 	killall -u $USER ssh-agent 2>/dev/null
 	ssh-agent -a $SSH_AUTH_SOCK > /dev/null
 fi
