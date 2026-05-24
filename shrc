@@ -1,0 +1,26 @@
+export EDITOR=vim
+
+HISTIGNORE_PATTERNS=(
+  'ls*' 'cd*' # traversal
+  'cp*' 'mv*' 'rm*' 'mkdir*' # file ops
+  'cat*' 'echo*' # inspecting things
+  '[bf]g' 'ps*' 'top*' # processes
+  'curl*' 'vim*' # applications
+)
+
+export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
+if [ ! -S $SSH_AUTH_SOCK ] || [ $(ssh-add -l >/dev/null 2>&1; echo $?) = 2 ]; then
+	# echo 'NOTE: starting a new SSH agent.'
+	rm -f $SSH_AUTH_SOCK
+	killall -u $USER ssh-agent 2>/dev/null
+	ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+fi
+
+# git clone https://github.com/junegunn/fzf-git.sh.git $HOME/.fzf-git
+[ -f "$HOME/.fzf-git/fzf-git.sh" ] && . "$HOME/.fzf-git/fzf-git.sh"
+
+# https://docs.mistral.ai/mistral-vibe/terminal/install
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
+
+# https://docs.deno.com/runtime/getting_started/installation/
+[ -f "$HOME/.deno/env" ] && . "$HOME/.deno/env"
