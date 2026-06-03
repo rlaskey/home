@@ -1,11 +1,11 @@
-export EDITOR=vim
+export EDITOR=hx
 
 HISTIGNORE_PATTERNS=(
-  'ls*' 'cd*' # traversal
-  'cp*' 'mv*' 'rm*' 'mkdir*' # file ops
-  'cat*' 'echo*' # inspecting things
-  '[bf]g' 'ps*' 'top*' # processes
-  'curl*' 'vim*' # applications
+	'ls*' 'cd*' # traversal
+	'cp*' 'mv*' 'rm*' 'mkdir*' # file ops
+	'cat*' 'echo*' # inspecting things
+	'[bf]g' 'ps*' 'top*' # processes
+	'less*' 'rg*' 'curl*' 'vim*' 'hx*' # applications
 )
 
 export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
