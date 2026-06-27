@@ -1,11 +1,19 @@
-export EDITOR=hx
+if command -v helix >/dev/null 2>&1; then
+	alias hx='helix'
+	export EDITOR=helix
+elif command -v hx >/dev/null 2>&1; then
+	export EDITOR=hx
+elif command -v vim >/dev/null 2>&1; then
+	export EDITOR=vim
+fi
 
 HISTIGNORE_PATTERNS=(
 	'ls*' 'cd*' # traversal
 	'cp*' 'mv*' 'rm*' 'mkdir*' # file ops
-	'cat*' 'echo*' # inspecting things
+	'cat*' 'echo*' 'less*' # inspecting things
 	'[bf]g' 'ps*' 'top*' # processes
-	'less*' 'rg*' 'curl*' 'vim*' 'hx*' # applications
+	'find*' 'rg*' 'curl*' # utilities
+	'vim*' 'hx*' # editors
 )
 
 export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
