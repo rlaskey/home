@@ -29,6 +29,3 @@ fi
 
 # https://docs.mistral.ai/mistral-vibe/terminal/install
 [ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
-
-# https://docs.deno.com/runtime/getting_started/installation/
-[ -f "$HOME/.deno/env" ] && . "$HOME/.deno/env"
