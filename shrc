@@ -13,7 +13,7 @@ HISTIGNORE_PATTERNS=(
 	'cat*' 'echo*' 'less*' # inspecting things
 	'[bf]g' 'ps*' 'top*' # processes
 	'find*' 'rg*' 'curl*' # utilities
-	'vim*' 'hx*' # editors
+	'hx*' 'nvim*' 'vim*' # editors
 )
 
 export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
