@@ -1,0 +1,49 @@
+enable_telemetry = false
+
+active_model = "large-4"
+
+# https://docs.mistral.ai/models/mistral-large-4-0
+[[models]]
+name = "mistral-large-4"
+provider = "mistral"
+alias = "large-4"
+thinking = "high"
+input_price = 1.36
+cached_input_price = 0.14
+output_price = 4.18
+supports_images = true
+auto_compact_threshold = 768_000
+
+# https://docs.mistral.ai/models/zai-glm-5-3
+[[models]]
+name = "zai-glm-latest"
+provider = "mistral"
+alias = "glm"
+thinking = "high"
+input_price = 1.4
+cached_input_price = 0.14
+output_price = 4.4
+auto_compact_threshold = 768_000
+
+# https://docs.mistral.ai/models/zai-glm-5-3-flash
+[[models]]
+name = "zai-glm-5-3-flash"
+provider = "mistral"
+alias = "glm-5-3-flash"
+thinking = "high"
+input_price = 0.15
+cached_input_price = 0.03
+output_price = 0.5
+supports_images = true
+auto_compact_threshold = 768_000
+
+# https://docs.mistral.ai/models/deepseek-v4-flash-1017
+[[models]]
+name = "deepseek-v4-1-flash-1017"
+provider = "mistral"
+alias = "deepseek-v4-1-flash-1017"
+thinking = "high"
+input_price = 0.3
+cached_input_price = 0.007
+output_price = 1.2
+auto_compact_threshold = 768_000
