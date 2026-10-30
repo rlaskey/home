@@ -8,9 +8,9 @@ name = "mistral-large-4"
 provider = "mistral"
 alias = "large-4"
 thinking = "high"
-input_price = 1.36
-cached_input_price = 0.14
-output_price = 4.18
+input_price = 0.7
+cached_input_price = 0.07
+output_price = 2.1
 supports_images = true
 auto_compact_threshold = 768_000
 
