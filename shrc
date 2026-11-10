@@ -11,7 +11,7 @@ HISTIGNORE_PATTERNS=(
 	'ls*' 'cd*' # traversal
 	'cp*' 'mv*' 'rm*' 'mkdir*' # file ops
 	'cat*' 'echo*' 'less*' # inspecting things
-	'[bf]g' 'ps*' 'top*' # processes
+	'[bf]g' 'ps *' 'top*' # processes
 	'find*' 'rg*' 'curl*' # utilities
 	'hx*' 'nvim*' 'vim*' # editors
 )
