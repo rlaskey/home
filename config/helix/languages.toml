@@ -1,15 +1,31 @@
 [[language]]
-name = "typescript"
+name = "javascript"
 roots = ["bun.lock", "bun.lockb", "package.json"]
-file-types = ["ts", "tsx"]
+file-types = ["js"]
 language-servers = ["vtsls"]
 auto-format = true
 formatter = { command = "bun", args = ["fmt", "--stdin-filepath=%{buffer_name}"] }
 
 [[language]]
-name = "javascript"
+name = "jsx"
 roots = ["bun.lock", "bun.lockb", "package.json"]
-file-types = ["js", "jsx"]
+file-types = ["jsx"]
+language-servers = ["vtsls"]
+auto-format = true
+formatter = { command = "bun", args = ["fmt", "--stdin-filepath=%{buffer_name}"] }
+
+[[language]]
+name = "tsx"
+roots = ["bun.lock", "bun.lockb", "package.json"]
+file-types = ["tsx"]
+language-servers = ["vtsls"]
+auto-format = true
+formatter = { command = "bun", args = ["fmt", "--stdin-filepath=%{buffer_name}"] }
+
+[[language]]
+name = "typescript"
+roots = ["bun.lock", "bun.lockb", "package.json"]
+file-types = ["ts"]
 language-servers = ["vtsls"]
 auto-format = true
 formatter = { command = "bun", args = ["fmt", "--stdin-filepath=%{buffer_name}"] }
