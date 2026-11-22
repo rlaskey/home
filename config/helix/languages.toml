@@ -2,7 +2,7 @@
 name = "typescript"
 roots = ["bun.lock", "bun.lockb", "package.json"]
 file-types = ["ts", "tsx"]
-language-servers = ["typescript-language-server"]
+language-servers = ["vtsls"]
 auto-format = true
 formatter = { command = "bun", args = ["fmt", "--stdin-filepath=%{buffer_name}"] }
 
@@ -10,10 +10,10 @@ formatter = { command = "bun", args = ["fmt", "--stdin-filepath=%{buffer_name}"]
 name = "javascript"
 roots = ["bun.lock", "bun.lockb", "package.json"]
 file-types = ["js", "jsx"]
-language-servers = ["typescript-language-server"]
+language-servers = ["vtsls"]
 auto-format = true
 formatter = { command = "bun", args = ["fmt", "--stdin-filepath=%{buffer_name}"] }
 
-[language-server.typescript-language-server]
+[language-server.vtsls]
 command = "bun"
-args = ["x", "typescript-language-server", "--stdio"]
+args = ["x", "@vtsls/language-server", "--stdio"]
